@@ -1,0 +1,2 @@
+class QuizLevelTwo < Quiz
+end
