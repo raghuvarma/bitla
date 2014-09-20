@@ -1,2 +1,3 @@
 class Quiz < ActiveRecord::Base
-end
+	has_many :quiz_options
+end 
