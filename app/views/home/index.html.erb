@@ -1,1 +1,5 @@
-<%= link_to "Quiz-1", quizzes_path %>
+
+<%= link_to 'Level-1', {:controller => "quizzes", :action => "create", :exam_level => "QuizLevelOne"}, :method => "post" %>
+<%= link_to 'Level-2', {:controller => "quizzes", :action => "create", :exam_level => "QuizLevelTwo"}, :method => "post" %>
+<%= link_to 'Level-3', {:controller => "quizzes", :action => "create", :exam_level => "QuizLevelThree"}, :method => "post" %>
+
