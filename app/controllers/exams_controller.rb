@@ -56,7 +56,7 @@ class ExamsController < ApplicationController
 	 
 	 @score = @correct * 100 / @total
 
-	 if(@score >= 30)
+	 if(@score >= 50)
 	 	@result = "Pass"
 	 else
 	 	@result = "Fail"
