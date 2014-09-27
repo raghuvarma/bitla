@@ -1,0 +1,12 @@
+#question, .final_result_fiels{font-size:1.2em;}
+
+/* question (/exams/question) page */
+.choice {font-size: 1.2em; margin: 0; border-radius: 4px;}
+.choice:hover {background-color: #B0C4DE;}
+.choice label {width: 400px; font-size:1em; display: inline-block; padding: 10px 0 10px 0; margin: 0;}
+
+/* feedback (/exams/answer) page */
+.correct {background-color: #98FA65;}
+.incorrect {background-color: #FF6347;}
+.feedback {font-weight: bold; font-size: 1.2em; }
+.feedback-choice {margin: 0 0 5px 0; font-size: 1.2em; padding: 10px 5px 10px 25px; border-radius: 4px;}
