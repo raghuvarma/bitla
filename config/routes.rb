@@ -17,6 +17,14 @@ Rails.application.routes.draw do
     resources :home
     resources :quizzes
 
+    post "exams/start"
+    
+    get "exams/question"
+    
+    post "exams/question"
+
+    post "exams/answer"
+
   # Example resource route with options:
   #   resources :products do
   #     member do
