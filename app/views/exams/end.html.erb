@@ -1,0 +1,18 @@
+<h1>Exam Results</h1>
+<p id="question">You answered correctly <%= @correct %> out of <%= @total %> questions.</p>
+<p class="final_result_fiels">Your result  <b><%= @result %></b></p>
+
+<p class="final_result_fiels">Start Time: <b><%= @start_time %></b></p>
+<p class="final_result_fiels">End Time: <b><%= @end_time %></b></p>
+<p class="final_result_fiels">Duration: <b><%= @duration %></b></p>
+<p  class="final_result_fiels" id="score"><b><%= @score %>%</b></p>
+
+<%= form_tag({:controller => "home", :action => "index"}, :method => "get") do %>
+  <div class="center">
+	 <%= submit_tag("Take another Exam", :class => "submit") %>
+  </div>
+<% end %>
+
+<% content_for(:title) do %>
+  Exam Results
+<% end %>

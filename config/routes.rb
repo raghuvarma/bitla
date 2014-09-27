@@ -25,6 +25,8 @@ Rails.application.routes.draw do
 
     post "exams/answer"
 
+    get "exams/end"
+
   # Example resource route with options:
   #   resources :products do
   #     member do

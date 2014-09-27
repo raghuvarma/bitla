@@ -50,4 +50,28 @@ class ExamsController < ApplicationController
 	 session[:current] += 1
   end
 
+  def end
+	 @correct = session[:correct]
+	 @total   = session[:total]
+	 
+	 @score = @correct * 100 / @total
+
+	 if(@score >= 30)
+	 	@result = "Pass"
+	 else
+	 	@result = "Fail"
+	 end
+
+	 @@exam.update_attributes(:score => @score, :result => @result)
+
+	 @time = @@exam.updated_at - @@exam.created_at
+
+	 @duration = Time.at(@time).utc.strftime("%H:%M:%S")
+
+	 @start_time = Time.at(@@exam.created_at).utc.strftime("%H:%M:%S")
+
+	 @end_time =  Time.at(@@exam.updated_at).utc.strftime("%H:%M:%S")
+
+  end
+
 end
