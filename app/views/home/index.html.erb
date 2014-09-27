@@ -1,5 +1,6 @@
 
-<%= link_to 'Level-1', {:controller => "quizzes", :action => "create", :exam_level => "QuizLevelOne"}, :method => "post" %>
-<%= link_to 'Level-2', {:controller => "quizzes", :action => "create", :exam_level => "QuizLevelTwo"}, :method => "post" %>
-<%= link_to 'Level-3', {:controller => "quizzes", :action => "create", :exam_level => "QuizLevelThree"}, :method => "post" %>
-
+<%= link_to 'Level-1', {:controller => "exams", :action => "start", :exam_level => "QuizLevelOne"}, :class=> "navbar-toggle",  :method => "post" %>
+<%= link_to 'Level-2', {:controller => "exams", :action => "start", :exam_level => "QuizLevelTwo"}, :class=> "navbar-toggle", :method => "post" %>
+<%= link_to 'Level-3', {:controller => "exams", :action => "start", :exam_level => "QuizLevelThree"}, :class=> "navbar-toggle", :method => "post" %>
+<br/><br/><br/>
+<h3>To start exam select one of the above level type</h3>
