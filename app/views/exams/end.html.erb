@@ -5,7 +5,7 @@
 <p class="final_result_fiels">Start Time: <b><%= @start_time %></b></p>
 <p class="final_result_fiels">End Time: <b><%= @end_time %></b></p>
 <p class="final_result_fiels">Duration: <b><%= @duration %></b></p>
-<p  class="final_result_fiels" id="score"><b><%= @score %>%</b></p>
+<p  class="final_result_fiels" id="score">You got <b><%= @score %>%</b></p>
 
 <%= form_tag({:controller => "home", :action => "index"}, :method => "get") do %>
   <div class="center">
