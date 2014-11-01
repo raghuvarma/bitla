@@ -24,7 +24,7 @@ class ExamsController < ApplicationController
 	 end
 	 
 	 @question = Quiz.find(session[:questions][@current])
-	 @choices = @question.quiz_options.sort_by{rand}
+	 @choices = @question.quiz_options
 
 	 session[:question] = @question.id
 	 session[:choices] = @choices.map{|c| c.id }
@@ -71,6 +71,8 @@ class ExamsController < ApplicationController
 	 @start_time = Time.at(@@exam.created_at).utc.strftime("%H:%M:%S")
 
 	 @end_time =  Time.at(@@exam.updated_at).utc.strftime("%H:%M:%S")
+
+	 #@@exam.update_attributes(:start_time => @@exam.created_at , :end_time => @@exam.updated_at)
 
   end
 
